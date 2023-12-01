@@ -29,7 +29,7 @@ print("&"*70)
 
 # GET http://apic-ip-address/api/class/topSystem.json
 
-url = "https://sandboxapicdc.cisco1.com/api/class/topSystem.json"
+url = "https://sandboxapicdc.cisco.com/api/class/topSystem.json"
 cabecera = {"Content-Type": "application/json"}
 cookie = {'APIC-cookie':API_Token}
 
@@ -50,3 +50,8 @@ for i in range(0,4):
 
     print("address: "+address+"   "+"fabricMAC: "+"   "+"state: "+state)
 
+# En la peticion
+print(respuesta.request.url)
+print("peticio ",respuesta.request.headers)
+# En la respuesta
+print("respuesta ",respuesta.url)
